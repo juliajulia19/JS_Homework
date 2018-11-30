@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Пользователь вводит строку, необходимо определить 
+        является ли она палиндромом. (Палиндром - это текст, 
+        который читается одинаково и слева, и справа. 
+        Примеры для тестирования: 
+        1) '49094' – это строка палиндром
+        2) 'Я бы изменил мир, но бог не дает исходники' – это строка не палиндром
+        3) 'Сел в озере березов лес' – это строка палиндром*/
+        
+        
+        var newstr;
+	    var newstrarr;
+        var palidr;
+        
+        newstr = prompt("Введите строку");
+        
+        
+        newstr = newstr.toLowerCase();
+        newstr = newstr.replace(/\s/g, '');
+        newstrarr = newstr.split('');
+        newstrarr = newstrarr.reverse();
+        palidr = newstrarr.join('').replace(/\s/g, '');
+        
+        if (palidr === newstr) {
+            alert("Да, это палиндром");
+        } else {
+            alert("Нет, это не палиндром");
+        }
+            
+    
+    </script>
+</body>
+</html>
