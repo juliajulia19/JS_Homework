@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ed;
+        var kol;
+        var itogo;
+        
+        ed = prompt ("Выберите единицу измерения:\n 1 — дециметр\n 2 — километр\n 3 — метр\n 4 — миллиметр\n 5 — сантиметр.");
+        kol = +prompt ("Введите длину отрезка");
+        
+        switch (ed) {
+        
+            case "1":
+                itogo = kol * 0.1;
+                alert("В метрах: " + itogo);
+                break;
+                
+            case "2":
+                itogo = kol * 1000;
+                alert("В метрах: " + itogo);
+                break;
+                
+            case "3":
+                itogo = kol;
+                alert("В метрах: " + itogo);
+                break;
+                
+                
+            case "4":
+                itogo = kol * 0.001;
+                alert("В метрах: " + itogo);
+                break;
+                
+            case "5":
+                itogo = kol * 0.01;
+                alert("В метрах: " + itogo);
+                break;
+                
+            default: 
+                alert("Вы ввели неверное значение");
+        }
+    
+    </script>
+</body>
+</html>
