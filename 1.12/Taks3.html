@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Дана строка S и символ C. Удвоить каждое вхождение символа C в строку S.
+        
+        let s = prompt('Введите строку'),
+            symb = prompt('Введите символ, который нужно удвоить'),
+            reg = new RegExp(symb, "ig"),
+            result = s.replace(reg, symb + symb);
+
+        
+        alert('Получается ' + result);
+    
+    
+    </script>
+</body>
+</html>
