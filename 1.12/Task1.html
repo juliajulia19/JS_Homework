@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Задать размер ипотечного кредита, процентную ставку, кол-во лет . Найти 
+переплату по кредиту, значение переплаты вывести пользователю.*/
+        
+        let sum = prompt('Укажите сумму кредита'),
+            p = prompt('Укажите размер процентной ставки'),
+            t = prompt('Укажите срок кредита в годах'),
+            monthp = p / 100 / 12,
+            srok = t * 12,
+            k = (monthp * Math.pow((1+monthp),srok))/(Math.pow((1+monthp),srok)-1),
+            overpay = Math.round(k * srok * sum - sum);
+            
+            alert('Переплата составляет ' + overpay);
+        
+    
+    
+    </script>
+</body>
+</html>
