@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        td {
+          border: 1px solid;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+} 
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td id="0"></td>
+            <td id="1"></td>
+            <td id="2"></td>
+        </tr>
+        <tr>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+        </tr>
+        <tr>
+            <td id="6"></td>
+            <td id="7"></td>
+            <td id="8"></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        /*Одномерным массивом задана доска 3 на 3 
+var area = 
+[ null, null, null, null, null, null, null, null, null ]
+Необходимо сформировать и вывести (document.write) игровое поле состоящее из квадратов для крестиков-ноликов в HTML. 
+При появлении в массиве 0-ля рисовать нолик , 1-цы крестик 
+Пример: [ 1, null, 0, null, 1, null, null, null, null ] на поле 2-а крестика, и 1-н нолик.*/
+
+        let arr = [1, null, 0, null, 1, null, null, null, null];
+
+        for (let i = 0, len = arr.length; i < len; i++) {
+            if (arr[i] === 1) {
+                document.getElementById(i).innerHTML = "X";
+            } else if (arr[i] === 0) {
+                document.getElementById(i).innerHTML = "O";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

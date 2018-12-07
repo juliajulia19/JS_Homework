@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Заданы два массива A и B необходимо их объединить 
+в один массив C так, чтобы в массиве остались уникальные 
+(неповторяющиеся) элементы. 
+Например: A = [1,2], B = [2,3] получим С = [1, 2, 3].*/
+
+        let arr1 = [1, 2, 3, 4],
+            arr2 = [3, 4, 5, 6],
+            arr3 = arr1.concat(arr2);
+
+        function unique(arr) {
+            var result = [];
+
+            nextInput:
+                for (var i = 0; i < arr.length; i++) {
+                    var str = arr[i];
+                    for (var j = 0; j < result.length; j++) {
+                        if (result[j] === str) continue nextInput;
+                    }
+                    result.push(str);
+                }
+
+            return result;
+        }
+        alert(unique(arr3));
+
+    </script>
+</body>
+
+</html>
