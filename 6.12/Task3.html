@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fib(x) {
+            let y = [1, 1];
+            for (let i = 2; i < x; i++) {
+                y[i] = y[i - 1] + y[i - 2];
+            }
+            if (x === 1) {
+                console.log([1])
+            } else {
+                console.log(y);
+            }
+        }
+
+        fib(10);
+    </script>
+</body>
+
+</html>

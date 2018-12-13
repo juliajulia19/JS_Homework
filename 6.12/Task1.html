@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Построить объект студент со свойствами:
+            Имя, Фамилия, Возраст, Интересы (в виде массива), Место обучения.
+            Написать отдельную функцию, которой передается объект студент, а она выводит его содержимое.*/
+
+        var student = {
+            name: "Boris",
+            surname: "Ivanov",
+            age: 21,
+            university: "SPbGU",
+            interests: ["Chemistry", " Breaking Bad", " Dogs"]
+        }
+
+        function show(student) {
+            for (let i in student) {
+                console.log(`${i}: ${student[i]}`);
+            };
+        };
+
+        show(student);
+
+    </script>
+</body>
+
+</html>

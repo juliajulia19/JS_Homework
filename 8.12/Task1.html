@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Построить объект студент:
+- свойства: Имя, Фамилия, Возраст, Интересы (в виде массива), Место обучения.
+- метод выводящий в консоль биографическую справку в виде, например: 
+«Иван Петров. 21 год. Интересы: программирование, музыка, аниме. Учится в ИТМО.8*/
+
+
+        var student = {
+            name: "Борис",
+            surname: "Иванов",
+            age: 21,
+            university: "СПбГУ",
+            interests: ["химию", " сериал Во все тяжкие", " дома на колёсах"]
+        }
+        
+        student.about = function() {
+            console.log(`Меня зовут ${this.name} ${this.surname}. Мне ${this.age}. Люблю ${this.interests}. Учусь в ${this.university}.`)
+        }
+
+        student.about();
+    </script>
+</body>
+</html>
