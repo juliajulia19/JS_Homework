@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div onclick="change(this)"></div>
+    <div onclick="change(this)"></div>
+    <div onclick="change(this)"></div>
+
+    <script>
+        /*Даны несколько div элементов на html.
+    По первому нажатию на каждый div 
+    он перекрашивается зеленым цветом, 
+    при повторном нажатии перекрашивается 
+    обратно и так далее каждый клик 
+    происходит чередование цвета.*/
+
+        function change(e) {
+            if (e.style.backgroundColor) {
+                e.style.backgroundColor = null;
+            } else {
+                e.style.backgroundColor = "green";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
