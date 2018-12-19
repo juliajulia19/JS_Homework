@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Создать шаблон объектов «Товар». Свойства товара «Имя» и «Цена». Создать шаблон объектов «Корзина товаров». 
+Приватные свойства объекта:
+- Массив товаров;
+- Количество товаров;
+- Сумма товаров.
+Методы объекта:
+- Добавить товар;
+- Вернуть сумму товара;
+- Вернуть количество товара.*/
+
+        function Item(name, price) {
+            this.name = name;
+            this.price = price;
+        };
+
+        function Cart() {
+            var items = [];
+            var quantity = 0;
+            var totalSum = 0;
+
+            this.set = function(item) {
+                items.push(item.name);
+                totalSum += item.price;
+                quantity++;
+            };
+
+            this.getQuantity = function() {
+                return "Количество товаров в корзине: " + quantity;
+            };
+
+            this.getTotalSum = function() {
+                return "Сумма покупки: " + totalSum;
+            };
+        };
+
+
+        let item1 = new Item("Кардиган", 2500),
+            item2 = new Item("Пальто", 9000),
+            item3 = new Item("Шарф", 800),
+            winterCart = new Cart();
+
+        winterCart.set(item1);
+        winterCart.set(item2);
+        winterCart.set(item3);
+
+        alert(winterCart.getQuantity());
+        alert(winterCart.getTotalSum());
+    </script>
+</body>
+
+</html>
